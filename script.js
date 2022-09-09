@@ -1,22 +1,33 @@
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "fb149e99d2msh153206232876bbcp1e19d6jsncc2b70ec0cb9",
-    "X-RapidAPI-Host": "reddit-meme.p.rapidapi.com",
-  },
-};
-fetch("https://reddit-meme.p.rapidapi.com/memes/top", options)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
-function getData() {
-  return fetch("https://reddit-meme.p.rapidapi.com/memes/top", {})
-    .then((response) => response.json())
-    .then((responseData) => {
-      console.log(responseData);
-      return responseData;
+function execute() {
+  const url =
+    "https://api.newscatcherapi.com/v2/search?q=Apple&from='2021/9/01'&countries=CA&page_size=1";
+  const options = {
+    method: "GET",
+    headers: {
+      // Accept: "application/json",
+      "x-api-key": "gfp9aspPg2S3NP6L9fNBeiF8EfgAIBghZ0boegVtQyo",
+    },
+  };
+
+  fetch(url, options)
+    .then((response) => {
+      console.log("response", response);
+      if (response.ok) {
+        return response.text();
+      }
+      return response.text().then((err) => {
+        return Promise.reject({
+          status: response.status,
+          statusText: response.statusText,
+          errorMessage: err,
+        });
+      });
     })
-    .catch((error) => console.warn(error));
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 }
-getData().then((response) => console.log(response));
-console.log(reddit[0].subreddit);
+execute();
