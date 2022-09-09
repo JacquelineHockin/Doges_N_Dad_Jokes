@@ -11,9 +11,9 @@
 // }
 // getData();
 
-// function filterData(coldSprings) {
-//   console.log(reddit[0].full_name);
-// }
+function filterData(coldSprings) {
+  console.log(reddit[0].full_name);
+}
 
 // const options = {
 //   method: "GET",
