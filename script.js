@@ -1,3 +1,5 @@
+function fetchJokes() {
+  var url = "https://official-joke-api.appspot.com/random_joke";
   fetch(url)
     .then((response) => {
       console.log("response", response);
