@@ -76,3 +76,20 @@ body {
     justify-content: flex-start;
     padding: 3cm;
   }
+  
+  #dogeImage {
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
