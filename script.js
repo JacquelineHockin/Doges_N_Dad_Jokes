@@ -16,13 +16,15 @@ function fetchJokes() {
       });
     })
     .then((data) => {
-      console.log(data);
+      var setup = JSON.parse(data).setup;
+      document.getElementById("setup").innerHTML = setup;
+      var punchline = JSON.parse(data).punchline;
+      document.getElementById("punchline").innerHTML = punchline;
     })
     .catch((err) => {
       console.error(err);
     });
 }
-fetchJokes();
 
 function fetchDoge() {
   var url = "http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true";
@@ -50,4 +52,27 @@ function fetchDoge() {
       console.error(err);
     });
 }
-fetchDoge();
+
+var updatePage = function () {
+  fetchJokes();
+  fetchDoge();
+};
+
+var init = function () {
+  updatePage();
+};
+
+init();
+
+var punchlineText = document.querySelector("#punchline");
+document.addEventListener("click", function (event) {
+  if (event.target === document.getElementById("showPunchline")) {
+    punchlineText.className = "show";
+  }
+});
+
+document.addEventListener("click", function (event) {
+  if (event.target === document.getElementById("refresh")) {
+    updatePage();
+  }
+});
