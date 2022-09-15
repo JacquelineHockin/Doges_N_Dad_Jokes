@@ -1,0 +1,25 @@
+#dogeImage {
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 400px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("img.webp");
+  position: absolute;
+}
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columns > div {
+  flex-basis: 40%;
+}
+.columns > div:first-of-type {
+  background-color: lavender;
+  flex-basis: 60%;
+  background-image: url("./img_SpeechBubble.jpg");
+}
+#dad {
+  width: 100%;
+}
