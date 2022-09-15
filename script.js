@@ -1,6 +1,5 @@
 function fetchJokes() {
   var url = "https://official-joke-api.appspot.com/random_joke";
-
   fetch(url)
     .then((response) => {
       console.log("response", response);
@@ -52,17 +51,10 @@ function fetchDoge() {
       console.error(err);
     });
 }
-
 var updatePage = function () {
   fetchJokes();
   fetchDoge();
 };
-
-var init = function () {
-  updatePage();
-};
-
-init();
 
 var punchlineText = document.querySelector("#punchline");
 document.addEventListener("click", function (event) {
@@ -74,5 +66,12 @@ document.addEventListener("click", function (event) {
 document.addEventListener("click", function (event) {
   if (event.target === document.getElementById("refresh")) {
     updatePage();
+    punchlineText.className = "hide";
   }
 });
+
+var init = function () {
+  updatePage();
+};
+
+init();
