@@ -53,17 +53,6 @@ function fetchDoge() {
     });
 }
 
-var updatePage = function () {
-  fetchJokes();
-  fetchDoge();
-};
-
-var init = function () {
-  updatePage();
-};
-
-init();
-
 var punchlineText = document.querySelector("#punchline");
 document.addEventListener("click", function (event) {
   if (event.target === document.getElementById("showPunchline")) {
@@ -71,8 +60,20 @@ document.addEventListener("click", function (event) {
   }
 });
 
+var updatePage = function () {
+  fetchJokes();
+  fetchDoge();
+};
+
 document.addEventListener("click", function (event) {
   if (event.target === document.getElementById("refresh")) {
     updatePage();
+    punchlineText.className = "hide";
   }
 });
+
+var init = function () {
+  updatePage();
+};
+
+init();

@@ -23,34 +23,6 @@ body {
   background-image: url("background.jpg");
 }
 
-#dogeImage {
-  background-repeat: no-repeat;
-  height: 400px;
-  width: 400px;
-  background-size: cover;
-  background-position: center;
-}
-.show {
-  display: block;
-}
-.hide {
-  display: none;
-}
-
-h1 {
-  font-weight: 900;
-}
-
-header {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 6px 40px 20px 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
 a,
 #refresh,
 #showPunchline {
