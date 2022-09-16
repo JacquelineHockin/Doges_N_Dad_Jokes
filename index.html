@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Project</title>
   </head>
   <body>
     <div class="background-image"></div>
@@ -14,17 +17,43 @@
         <h1>Doges and Dad Jokes</h1>
         <nav>
           <a
+            class="button is-danger is-rounded"
             href="file:///Users/haleytrumbo/Desktop/Group-1-Project-/venmo.html"
             >Money please</a
           >
         </nav>
       </header>
-      <p id="setup"></p>
-      <p id="punchline" class="hide"></p>
-      <div id="dogeImage"></div>
-      <button id="showPunchline">Give Me the Punchline</button>
-      <button id="refresh">Next Doge Joke</button>
-      <script src="./script.js"></script>
+      <div class="columns">
+        <div class="column is-4 is-offset-1">
+          <div id="dogeImage"></div>
+        </div>
+        <div class="column is-5">
+          <div class="joke">
+            <p id="setup"></p>
+            <p id="punchline" class="hide"></p>
+            <div class="container">
+              <div class="field is-grouped">
+                <button
+                  class="button is-danger is-rounded ml-6 mt-5"
+                  id="showPunchline"
+                >
+                  Give me the punchline
+                </button>
+                <button
+                  class="button is-danger is-rounded mr-2 ml-2 mt-5"
+                  id="refresh"
+                >
+                  Alright, tell me another...
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img id="dad" src="./img_dad.png" />
+        </div>
+      </div>
     </div>
   </body>
+  <script src="./script.js"></script>
 </html>

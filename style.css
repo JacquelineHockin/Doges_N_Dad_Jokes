@@ -1,8 +1,10 @@
+/* css to set the background image and color */
 html,
 body {
   padding: 0;
   margin: 0;
   height: 100%;
+  width: 100%;
   position: relative;
 }
 .background-color {
@@ -23,13 +25,17 @@ body {
   background-image: url("background.jpg");
 }
 
+/* styling of shibu inu api images */
 #dogeImage {
   background-repeat: no-repeat;
   height: 400px;
   width: 400px;
   background-size: cover;
   background-position: center;
+  margin-top: 80px;
 }
+
+/* sets display of show and hide classes for the punchline in html */
 .show {
   display: block;
 }
@@ -37,13 +43,40 @@ body {
   display: none;
 }
 
+/* text styling for website name in header  */
 h1 {
   font-weight: 900;
+  font-size: 35px;
 }
 
+/* styling for setup and punchline text */
+#setup {
+  font-family: Helvetica, sans-serif;
+  font-size: 40px;
+  padding-top: 200px;
+  text-align: center;
+}
+
+#punchline {
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+#showPunchline,
+#refresh {
+  font-size: 20px;
+  padding: 20px 20px 20px 20px;
+}
+
+/* styling for header */
 header {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 6px 40px 20px 0px;
+  font-family: Helvetica, sans-serif;
+  padding: 20px 40px 20px 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -51,18 +84,24 @@ header {
   align-items: center;
 }
 
-a,
-#refresh,
-#showPunchline {
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  background: #ff0000;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 80px;
-  color: rgb(255, 255, 255);
-  outline: none;
-  cursor: pointer;
-  margin: 0px;
-  font-size: 16px;
+/* start of jacquelines code */
+
+/* column styling  */
+.columns {
+  min-height: 80%;
+  margin: 0 !important;
+}
+
+/* middle cloumn styling  */
+.speech-bubble {
+  width: 100%;
+  height: 100%;
+}
+
+/* right column styling */
+#dad {
+  width: 15%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
