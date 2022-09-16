@@ -28,11 +28,15 @@ body {
 /* styling of shibu inu api images */
 #dogeImage {
   background-repeat: no-repeat;
-  height: 400px;
-  width: 400px;
+  height: 450px;
+  width: 425px;
   background-size: cover;
   background-position: center;
   margin-top: 80px;
+  border-style: double;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 25px;
 }
 
 /* sets display of show and hide classes for the punchline in html */
@@ -47,20 +51,36 @@ body {
 h1 {
   font-weight: 900;
   font-size: 35px;
+  word-spacing: -5px;
+  text-decoration: underline;
+  text-decoration-color: rgba(216, 69, 98, 0.642);
 }
 
 /* styling for setup and punchline text */
 #setup {
-  font-family: Helvetica, sans-serif;
-  font-size: 40px;
-  padding-top: 200px;
+  font-family: monospace;
+  font-size: 45px;
+  font-weight: 700;
   text-align: center;
+  line-height: 98%;
+}
+
+.joke {
+  padding: 15px 15px 15px 15px;
+  margin-top: 80px;
+  border-style: double;
+  border-radius: 25px;
+  border-width: 2px;
+  border-color: black;
 }
 
 #punchline {
-  font-family: Helvetica, sans-serif;
-  font-size: 20px;
+  font-family: monospace;
+  font-size: 30px;
   text-align: center;
+  padding-top: 20px;
+  text-decoration: underline;
+  text-decoration-color: rgba(216, 69, 98, 0.642);
 }
 
 .container {
@@ -70,12 +90,13 @@ h1 {
 #showPunchline,
 #refresh {
   font-size: 20px;
-  padding: 20px 20px 20px 20px;
+  padding: 27px 25px 27px 25px;
+  font-family: sans-serif;
 }
 
 /* styling for header */
 header {
-  font-family: Helvetica, sans-serif;
+  font-family: monospace;
   padding: 20px 40px 20px 40px;
   display: flex;
   flex-direction: row;
@@ -84,7 +105,10 @@ header {
   align-items: center;
 }
 
-/* start of jacquelines code */
+#money {
+  font-size: 20px;
+  font-family: sans-serif;
+}
 
 /* column styling  */
 .columns {
@@ -104,4 +128,16 @@ header {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+/* local storage */
+#local-storage-text,
+#saved,
+#showJoke {
+  font-family: monospace;
+  font-size: 18px;
+  padding: 20px 10px 20px 10px;
+}
+
+#local-storage-text {
+  text-align: center;
 }

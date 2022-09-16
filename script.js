@@ -77,3 +77,22 @@ var init = function () {
 };
 
 init();
+
+var saved = document.querySelector("#saved");
+var saveBtn = document.querySelector("#lock2");
+
+// document.addEventListener("click", function (event) {
+//   if (event.target === document.getElementById("lock2")) {
+//     saved.className = "show";
+//   }
+// });
+
+for (var i = 0; i < saveBtn.length; i++) {
+  saveBtn[i].onclick = function () {
+    time -= 10;
+    saved.className = "show";
+    setTimeout(function () {
+      saved.className = "hide";
+    }, 1000);
+  };
+}

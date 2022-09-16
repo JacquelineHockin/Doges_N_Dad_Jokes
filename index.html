@@ -14,12 +14,13 @@
     <div class="background-image"></div>
     <div class="background-color">
       <header>
-        <h1>Doges and Dad Jokes</h1>
+        <h1>Doges 'N Dad Jokes</h1>
         <nav>
           <a
+            id="money"
             class="button is-danger is-rounded"
             href="file:///Users/haleytrumbo/Desktop/Group-1-Project-/venmo.html"
-            >Money please</a
+            >Money Please</a
           >
         </nav>
       </header>
@@ -27,26 +28,52 @@
         <div class="column is-4 is-offset-1">
           <div id="dogeImage"></div>
         </div>
-        <div class="column is-5">
+        <div class="column is-5 ml-6">
           <div class="joke">
             <p id="setup"></p>
             <p id="punchline" class="hide"></p>
             <div class="container">
               <div class="field is-grouped">
                 <button
-                  class="button is-danger is-rounded ml-6 mt-5"
+                  class="button is-danger is-rounded ml-3 mt-6"
                   id="showPunchline"
                 >
                   Give me the punchline
                 </button>
                 <button
-                  class="button is-danger is-rounded mr-2 ml-2 mt-5"
+                  class="button is-danger is-rounded ml-3 mt-6"
                   id="refresh"
                 >
-                  Alright, tell me another...
+                  Alright, tell me another
                 </button>
               </div>
             </div>
+          </div>
+          <div class="local-storage">
+            <!-- This is where local storage area starts-->
+            <p id="local-storage-text">
+              Save your favorite joke to show your friends and dads! Click the
+              lock icon to save it, and the wand icon to show it.
+            </p>
+            <ul>
+              <li>
+                <!-- button to save joke to local storage -->
+                <button id="lock" class="local-storage-button">
+                  <i id="lock2" class="fa-solid fa-lock"></i>
+                </button>
+                <p id="saved" class="hide">Saved!</p>
+              </li>
+
+              <li>
+                <!-- button to fetch from local storage -->
+                <button class="local-storage-button">
+                  <i id="magic" class="fa-solid fa-wand-magic-sparkles"></i>
+                </button>
+                <!-- p tag that will show the joke that the user fetched from local storage-->
+                <p id="showJoke"></p>
+              </li>
+              <p></p>
+            </ul>
           </div>
         </div>
         <div>
@@ -55,5 +82,9 @@
       </div>
     </div>
   </body>
+  <script
+    src="https://kit.fontawesome.com/c6386d3a21.js"
+    crossorigin="anonymous"
+  ></script>
   <script src="./script.js"></script>
 </html>
