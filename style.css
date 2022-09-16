@@ -1,0 +1,49 @@
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  position: relative;
+}
+
+.columns {
+  min-height: 100vh;
+  margin: 0 !important;
+}
+
+.speech-bubble {
+  width: 100%;
+  /* background-image: url("./img_speech-bubble.png"); */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+}
+
+#dogeImage {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#dad {
+  width: 15%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
