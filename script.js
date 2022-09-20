@@ -1,3 +1,27 @@
+// add favorite joke to local storage
+function add(favoriteJoke) {
+  localStorage.setItem("response", JSON.stringify(favoriteJoke));
+}
+
+document.getElementById("viewFavorite").addEventListener("click", function () {
+  // get local storage data
+  var response = JSON.parse(localStorage.getItem("response"));
+  // get elements we want to write to
+  var setup = document.getElementById("setupText");
+  var punchline = document.getElementById("punchlineText");
+
+  // if localstorage has any saved jokes, display them on the page
+  // if not, show an error message
+  if (response.setup) {
+    // update element text
+    setup.innerHTML = response.setup;
+    punchline.innerHTML = response.punchline;
+  } else {
+    // show error message
+    setup.innerHTML = "no stored jokes";
+  }
+});
+
 // funtion for API fetch request & return for random dad jokes //
 function fetchJokes() {
   var url = "https://official-joke-api.appspot.com/random_joke";
@@ -21,6 +45,11 @@ function fetchJokes() {
       document.getElementById("setup").innerHTML = setup;
       var punchline = JSON.parse(data).punchline;
       document.getElementById("punchline").innerHTML = punchline;
+
+      // display favorite joke if lock button is clicked on
+      document.getElementById("lock").addEventListener("click", function () {
+        add({ setup, punchline });
+      });
     })
     .catch((err) => {
       console.error(err);
@@ -60,6 +89,8 @@ var updatePage = function () {
   fetchDoge();
 };
 
+updatePage();
+
 // script to hide and show punchline of joke //
 var punchlineText = document.querySelector("#punchline");
 document.addEventListener("click", function (event) {
@@ -86,19 +117,12 @@ saveBtn.onclick = function () {
   }, 1000);
 };
 
-// init //
-var init = function () {
-  updatePage();
-};
-
 function add() {
-  var new_data = document.getElementById('lock');
-  if (localStorage.getItem('data') ==null) {
-    localStorage.setItem('data', '[]');
+  var new_data = document.getElementById("lock");
+  if (localStorage.getItem("data") == null) {
+    localStorage.setItem("data", "[]");
   }
-  var old_data =  JSON.parse(localStorage.getItem('data'));
+  var old_data = JSON.parse(localStorage.getItem("data"));
   old_data.push(new_data);
-  localStorage.setItem('data', JSON.stringify(old_data));
+  localStorage.setItem("data", JSON.stringify(old_data));
 }
-
-init();
