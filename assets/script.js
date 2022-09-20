@@ -25,7 +25,6 @@ document.getElementById("viewFavorite").addEventListener("click", function () {
 // funtion for API fetch request & return for random dad jokes //
 function fetchJokes() {
   var url = "https://official-joke-api.appspot.com/random_joke";
-
   fetch(url)
     .then((response) => {
       console.log("response", response);
