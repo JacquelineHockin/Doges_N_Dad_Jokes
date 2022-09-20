@@ -9,6 +9,12 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
   </head>
   <body>
     <div class="background-image"></div>
@@ -58,7 +64,7 @@
             <ul>
               <li>
                 <!-- button to save joke to local storage -->
-                <button id="lock" class="local-storage-button">
+                <button id="lock" class="local-storage-button" >
                   <i id="lock2" class="fa-solid fa-lock"></i>
                 </button>
                 <p id="saved" class="hide">Saved!</p>
@@ -66,11 +72,12 @@
 
               <li>
                 <!-- button to fetch from local storage -->
-                <button class="local-storage-button">
+                <button id="viewFavorite" class="local-storage-button">
                   <i id="magic" class="fa-solid fa-wand-magic-sparkles"></i>
                 </button>
-                <!-- p tag that will show the joke that the user fetched from local storage-->
-                <p id="showJoke"></p>
+                <!-- p tags that will show the joke that the user fetched from local storage-->
+                <p id="setupText"></p>
+                <p id="punchlineText"></p>
               </li>
               <p></p>
             </ul>
