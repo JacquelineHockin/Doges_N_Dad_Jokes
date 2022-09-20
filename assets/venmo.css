@@ -1,3 +1,4 @@
+/* css to set the background image and color */
 html,
 body {
   padding: 0;
@@ -21,6 +22,8 @@ body {
   position: absolute;
   background-image: url("background.jpg");
 }
+
+/* styling for title of site in top left corner */
 p {
   font-family: monospace;
   font-weight: 900;
@@ -29,10 +32,14 @@ p {
   text-decoration: underline;
   text-decoration-color: rgba(216, 69, 98, 0.642);
 }
+
+/* styling for go back button in top right corner */
 #goBack {
   font-size: 20px;
   font-family: sans-serif;
 }
+
+/* styling for doge image in middle of page */
 .image2 {
   z-index: -1;
   width: 65%;
@@ -42,6 +49,8 @@ p {
   top: 130px;
   border-radius: 25px;
 }
+
+/* styling for header  */
 header {
   padding: 20px 40px 20px 40px;
   display: flex;
@@ -50,6 +59,8 @@ header {
   flex-wrap: wrap;
   align-items: center;
 }
+
+/* styling for "thank creators text in middle of page" */
 h1 {
   font-family: sans-serif;
   font-size: 40px;
@@ -62,10 +73,8 @@ h1 {
     0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
     0 20px 20px rgba(0, 0, 0, 0.15);
 }
-p {
-  font-weight: 900;
-  font-size: 35px;
-}
+
+
 #group1 {
   margin-left: -123px;
   margin-top: 330px;
