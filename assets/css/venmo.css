@@ -1,0 +1,90 @@
+/* css to set the background image and color */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  position: relative;
+}
+.background-color {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(
+    /* to left top, */ rgba(247, 245, 245, 0) 50%,
+    rgba(184, 53, 82, 0.508)
+  );
+}
+.background-image {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("background.jpg");
+}
+
+/* styling for title of site in top left corner */
+p {
+  font-family: monospace;
+  font-weight: 900;
+  font-size: 35px;
+  word-spacing: -5px;
+  text-decoration: underline;
+  text-decoration-color: rgba(216, 69, 98, 0.642);
+}
+
+/* styling for go back button in top right corner */
+#goBack {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+/* styling for doge image in middle of page */
+.image2 {
+  z-index: -1;
+  width: 65%;
+  height: 67%;
+  position: absolute;
+  left: 250px;
+  top: 130px;
+  border-radius: 25px;
+}
+
+/* styling for header  */
+header {
+  padding: 20px 40px 20px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* styling for "thank creators text in middle of page" */
+h1 {
+  font-family: sans-serif;
+  font-size: 40px;
+  text-align: center;
+  font-size: xx-large;
+  padding: 25px;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+#group1 {
+  margin-left: -123px;
+  margin-top: 330px;
+}
+#group2 {
+  margin-left: 369px;
+  margin-top: -62px;
+}
+#cb-venmo,
+#ht-venmo,
+#rd-venmo,
+#jc-cashapp {
+  font-size: 20px;
+}
