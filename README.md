@@ -6,9 +6,9 @@ We created a website using two public API's. Our goal was to create a simple web
 
 ### Screenshot
 
-![Screenshot of application @12PM](./images/Screenshot1.png)
-![Screenshot of application @12PM](./images/Screenshot2.png)
-![Screenshot of application @12PM](./images/Screenshot3.png)
+![Screenshot of application @12PM](./images/ScreenshotHomePage.png)
+![Screenshot of application @12PM](./images/ScreenshotLocalStorage.png)
+![Screenshot of application @12PM](./images/ScreenshotVenmo.png)
 
 ### Links
 
