@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,70 +8,31 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Project 1</title>
-  </head>
-  <header>Dad Jokes n' Doges</header>
-  <body>
-    <nav>
-      <ul>
-        <li>
-          <a
-            href="file:///Users/haleytrumbo/Desktop/Group-1-Project-/index2.html"
-            >test</a
-          >
-        </li>
-      </ul>
-    </nav>
-    <div class="columns">
-      <div class="column is-4">
-        <div id="dogeImage"></div>
-      </div>
-      <div class="column is-5">
-        <div class="speech-bubble">
-          <p id="setup"></p>
-          <p id="punchline" class="hide"></p>
-          <div>
-            <button id="showPunchline">Have you heard the one about...?</button>
-            <button id="refresh">Alright, tell me another...</button>
-          </div>
-        </div>
-      </div>
-      <div class="column is-3">
-        <img id="dad" src="./img_dad.png" />
-      </div>
-    </div>
+    <link rel="stylesheet" href="./assets/style.css" />
+    
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
 
-    <script src="./script.js"></script>
-  </body>
-  <footer>Project by ....</footer>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- sets background image and color over image -->
     <div class="background-image"></div>
     <div class="background-color">
       <header>
+        <!-- website title and "money please" button at top of page -->
         <h1>Doges 'N Dad Jokes</h1>
         <nav>
           <a
+            id="money"
             class="button is-danger is-rounded"
             href="file:///Users/haleytrumbo/Desktop/Group-1-Project-/venmo.html"
-            >Money please</a
+            >Money Please</a
           >
         </nav>
       </header>
+      <!-- columns to put API photo and API jokes -->
       <div class="columns">
         <div class="column is-4 is-offset-1">
           <div id="dogeImage"></div>
@@ -81,28 +42,61 @@
             <p id="setup"></p>
             <p id="punchline" class="hide"></p>
             <div class="container">
+              <!-- buttons for joke api -->
               <div class="field is-grouped">
                 <button
-                  class="button is-danger is-rounded ml-6 mt-5"
+                  class="button is-danger is-rounded ml-3 mt-6"
                   id="showPunchline"
                 >
                   Give me the punchline
                 </button>
                 <button
-                  class="button is-danger is-rounded mr-2 ml-2 mt-5"
+                  class="button is-danger is-rounded ml-3 mt-6"
                   id="refresh"
                 >
-                  Alright, tell me another...
+                  Alright, tell me another
                 </button>
               </div>
             </div>
           </div>
+          <div class="local-storage">
+            <p id="local-storage-text">
+              Save your favorite joke to show your friends and dads! Click the
+              lock icon to save it, and the wand icon to show it.
+            </p>
+            <!-- button to save joke to local storage -->
+            <div>
+              <div class="local-storage-buttons">
+                <button id="lock" class="local-storage-button">
+                  <i id="lock2" class="fa-solid fa-lock"></i>
+                </button>
+                <p id="saved" class="hide">Saved!</p>
+              </div>
+              <div class="local-storage-buttons">
+                <!-- button to fetch from local storage -->
+                <button id="viewFavorite" class="local-storage-button">
+                  <i id="magic" class="fa-solid fa-wand-magic-sparkles"></i>
+                </button>
+                <!-- p tags that will show the joke that the user fetched from local storage-->
+                <p id="setupText"></p>
+                <p id="punchlineText"></p>
+              </li>
+              <p></p>
+            </ul>
+          </div>
         </div>
+        <!-- Michael Scott Photo -->
         <div>
-          <img id="dad" src="./img_dad (2).png" />
+          <img id="dad" src="./images/img_dad.png" />
         </div>
       </div>
     </div>
+    <!-- script for lock and wand icons -->
+    <script
+      src="https://kit.fontawesome.com/c6386d3a21.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script link -->
+    <script src="./assets/script.js"></script>
   </body>
-  <script src="./script.js"></script>
 </html>

@@ -10,11 +10,9 @@ We created a website using two public API's. Our goal was to create a simple web
 
 ![Screenshot of application @ 12PM](./assets/images/work-cal-screenshot2.png)
 
-![Screenshot of application @12PM](./assets/images/Doges'N Dad Jokes README Screenshot1.png)
-![Screenshot of application @12PM](./assets/images/Doges 'N Dad Jokes README Screenshot2.png)
-![Screenshot of application @12PM](./assets/imagesDoges 'N Dad Jokes README Screenshot3.png)
-
-
+![Screenshot of application @12PM](./assets/images/Screenshot1.png)
+![Screenshot of application @12PM](./assets/images/Screenshot2.png)
+![Screenshot of application @12PM](./assets/images/Screenshot3.png)
 
 ### Links
 
@@ -23,6 +21,6 @@ Deployed Site URL: [https://haleymay21.github.io/Challenge5-Calendar/]
 ### Contributors
 
 Jacqueline - https://github.com/JacquelineHockin
-Haley - 
+Haley -
 Chase -
 Randy -
