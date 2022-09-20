@@ -1,4 +1,4 @@
-html,
+/* html,
 body {
   min-height: 100vh;
   margin: 0;
@@ -16,24 +16,24 @@ body {
 .speech-bubble {
   width: 100%;
   /* background-image: url("./img_speech-bubble.png"); */
-  height: 100%;
+/* height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-position: center;
   background-size: cover;
-}
+} */
 
-#dogeImage {
+/* #dogeImage {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-}
+} */
 
-#dad {
+/* #dad {
   width: 15%;
   position: absolute;
   bottom: 0;
@@ -46,4 +46,104 @@ body {
 
 .show {
   display: block;
+} */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.background-color {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(
+    /* to left top, */ rgba(247, 245, 245, 0) 50%,
+    rgba(184, 53, 82, 0.508)
+  );
+}
+.background-image {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("background.jpg");
+}
+/* styling of shibu inu api images */
+#dogeImage {
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 425px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 80px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: black;
+  border-radius: 25px;
+}
+/* sets display of show and hide classes for the punchline in html */
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+/* text styling for website name in header  */
+h1 {
+  font-weight: 900;
+  font-size: 35px;
+}
+/* styling for setup and punchline text */
+#setup {
+  font-family: monospace;
+  font-size: 45px;
+  font-weight: 700;
+  padding-top: 150px;
+  text-align: center;
+  line-height: 98%;
+}
+#punchline {
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+}
+.container {
+  text-align: center;
+}
+#showPunchline,
+#refresh {
+  font-size: 20px;
+  padding: 20px 20px 20px 20px;
+}
+/* styling for header */
+header {
+  font-family: monospace;
+  padding: 20px 40px 20px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+/* start of jacquelines code */
+/* column styling  */
+.columns {
+  min-height: 80%;
+  margin: 0 !important;
+}
+/* middle cloumn styling  */
+.speech-bubble {
+  width: 100%;
+  height: 100%;
+}
+/* right column styling */
+#dad {
+  width: 15%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
