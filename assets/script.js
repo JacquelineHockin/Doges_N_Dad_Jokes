@@ -12,7 +12,7 @@ document.getElementById("viewFavorite").addEventListener("click", function () {
 
   // if localstorage has any saved jokes, display them on the page
   // if not, show an error message
-  if (response.setup) {
+  if (!!response.setup) {
     // update element text
     setup.innerHTML = response.setup;
     punchline.innerHTML = response.punchline;
@@ -116,13 +116,3 @@ saveBtn.onclick = function () {
     saved.className = "hide";
   }, 1000);
 };
-
-function add() {
-  var new_data = document.getElementById("lock");
-  if (localStorage.getItem("data") == null) {
-    localStorage.setItem("data", "[]");
-  }
-  var old_data = JSON.parse(localStorage.getItem("data"));
-  old_data.push(new_data);
-  localStorage.setItem("data", JSON.stringify(old_data));
-}
