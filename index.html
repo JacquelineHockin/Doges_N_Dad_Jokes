@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bulma link -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+    <!-- css link -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- sets background image and color over image -->
     <div class="background-image"></div>
     <div class="background-color">
       <header>
+        <!-- website title and "money please" button at top of page -->
         <h1>Doges 'N Dad Jokes</h1>
         <nav>
           <a
@@ -24,6 +28,7 @@
           >
         </nav>
       </header>
+      <!-- columns to put API photo and API jokes -->
       <div class="columns">
         <div class="column is-4 is-offset-1">
           <div id="dogeImage"></div>
@@ -33,6 +38,7 @@
             <p id="setup"></p>
             <p id="punchline" class="hide"></p>
             <div class="container">
+              <!-- buttons for joke api -->
               <div class="field is-grouped">
                 <button
                   class="button is-danger is-rounded ml-3 mt-6"
@@ -50,41 +56,41 @@
             </div>
           </div>
           <div class="local-storage">
-            <!-- This is where local storage area starts-->
             <p id="local-storage-text">
               Save your favorite joke to show your friends and dads! Click the
               lock icon to save it, and the wand icon to show it.
             </p>
-            <ul>
-              <li>
-                <!-- button to save joke to local storage -->
+            <!-- button to save joke to local storage -->
+            <div>
+              <div class="local-storage-buttons">
                 <button id="lock" class="local-storage-button">
                   <i id="lock2" class="fa-solid fa-lock"></i>
                 </button>
                 <p id="saved" class="hide">Saved!</p>
-              </li>
-
-              <li>
+              </div>
+              <div class="local-storage-buttons">
                 <!-- button to fetch from local storage -->
                 <button class="local-storage-button">
                   <i id="magic" class="fa-solid fa-wand-magic-sparkles"></i>
                 </button>
                 <!-- p tag that will show the joke that the user fetched from local storage-->
                 <p id="showJoke"></p>
-              </li>
-              <p></p>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- Michael Scott Photo -->
         <div>
           <img id="dad" src="./img_dad.png" />
         </div>
       </div>
     </div>
+    <!-- script for lock and wand icons -->
+    <script
+      src="https://kit.fontawesome.com/c6386d3a21.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script link -->
+    <script src="./script.js"></script>
   </body>
-  <script
-    src="https://kit.fontawesome.com/c6386d3a21.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="./script.js"></script>
 </html>

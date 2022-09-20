@@ -1,3 +1,4 @@
+// funtion for API fetch request & return for random dad jokes //
 function fetchJokes() {
   var url = "https://official-joke-api.appspot.com/random_joke";
 
@@ -26,6 +27,7 @@ function fetchJokes() {
     });
 }
 
+// funtion for API fetch request & return for random dad jokes //
 function fetchDoge() {
   var url = "http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true";
 
@@ -52,18 +54,19 @@ function fetchDoge() {
       console.error(err);
     });
 }
+// script to call both API functions //
+var updatePage = function () {
+  fetchJokes();
+  fetchDoge();
+};
 
+// script to hide and show punchline of joke //
 var punchlineText = document.querySelector("#punchline");
 document.addEventListener("click", function (event) {
   if (event.target === document.getElementById("showPunchline")) {
     punchlineText.className = "show";
   }
 });
-
-var updatePage = function () {
-  fetchJokes();
-  fetchDoge();
-};
 
 document.addEventListener("click", function (event) {
   if (event.target === document.getElementById("refresh")) {
@@ -72,27 +75,30 @@ document.addEventListener("click", function (event) {
   }
 });
 
+// click funtion to show "saved" for 1 second when lock button is clicked //
+var saveBtn = document.querySelector("#lock");
+var saved = document.querySelector("#saved");
+
+saveBtn.onclick = function () {
+  saved.className = "show";
+  setTimeout(function () {
+    saved.className = "hide";
+  }, 1000);
+};
+
+// init //
 var init = function () {
   updatePage();
 };
 
-init();
-
-var saved = document.querySelector("#saved");
-var saveBtn = document.querySelector("#lock2");
-
-// document.addEventListener("click", function (event) {
-//   if (event.target === document.getElementById("lock2")) {
-//     saved.className = "show";
-//   }
-// });
-
-for (var i = 0; i < saveBtn.length; i++) {
-  saveBtn[i].onclick = function () {
-    time -= 10;
-    saved.className = "show";
-    setTimeout(function () {
-      saved.className = "hide";
-    }, 1000);
-  };
+function add() {
+  var new_data = document.getElementById('lock');
+  if (localStorage.getItem('data') ==null) {
+    localStorage.setItem('data', '[]');
+  }
+  var old_data =  JSON.parse(localStorage.getItem('data'));
+  old_data.push(new_data);
+  localStorage.setItem('data', JSON.stringify(old_data));
 }
+
+init();
